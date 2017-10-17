@@ -6,7 +6,8 @@ from .serializers import (
 from rest_framework.generics import (
     ListAPIView,
     DestroyAPIView,
-    CreateAPIView
+    CreateAPIView,
+    RetrieveAPIView
 )
 from .models import Photo
 from rest_framework import status
@@ -22,6 +23,13 @@ class PhotosListApiView(ListAPIView):
     serializer_class = PhotoListSerializer
     permission_classes = [AllowAny]
     pagination_class = MyPageNumberPagination
+    queryset = Photo.objects.all()
+
+
+class PhotoRetrieveApiView(RetrieveAPIView):
+    serializer_class = PhotoSerializer
+    permission_classes = [AllowAny]
+    lookup_url_kwarg = 'id'
     queryset = Photo.objects.all()
 
 

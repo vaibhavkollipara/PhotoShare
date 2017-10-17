@@ -13,10 +13,6 @@ class Photo(models.Model):
         return "Photo by user {}".format(self.owner)
 
     @property
-    def image_src(self):
-        return self.photo.url
-
-    @property
     def uploaded_by(self):
         return self.owner.username
 

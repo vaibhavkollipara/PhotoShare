@@ -14,9 +14,9 @@ class PhotoListSerializer(ModelSerializer):
     class Meta:
         model = Photo
         fields = [
-            'uploaded_by',
             'id',
-            'image_src',
+            'photo',
+            'uploaded_by',
             'upload_date'
         ]
 
@@ -26,7 +26,9 @@ class PhotoSerializer(ModelSerializer):
     class Meta:
         model = Photo
         fields = [
-            'photo'
+            'id',
+            'photo',
+            'uploaded_by'
         ]
 
 
