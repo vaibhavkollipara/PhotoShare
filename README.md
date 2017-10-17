@@ -29,7 +29,8 @@ http://localhost:port/admin : access admin panel
 
 ## Api Endpoints
 
-* http://localhost:port/authenticate/         : Add New user
+* http://localhost:port/newuser/              : Register New User
+* http://localhost:port/authenticate/         : Get auth token
 * http://localhost:port/photos/               : View Photos list (paginated)
 * http://localhost:port/photos/{id}/          : View Photo by Id
 * http://localhost:port/photos/add/           : Add New Photo
