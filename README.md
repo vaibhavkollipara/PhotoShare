@@ -34,3 +34,8 @@ http://localhost:port/admin : access admin panel
 * http://localhost:port/photos/{id}/          : View Photo by Id
 * http://localhost:port/photos/add/           : Add New Photo
 * http://localhost:port/photos/delete/{id}/   : Delete Photo
+
+
+## Run test script
+
+> python manage.py test
